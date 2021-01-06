@@ -37,6 +37,7 @@ sudo apt-get update
 sudo apt install sublist3r amass masscan nmap python
 
 sudo apt install python3-pip
+sudo apt install python-pip
 rm go1.15.6.linux-amd64.tar.gz
 
 git clone https://github.com/gwen001/github-search.git
