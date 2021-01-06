@@ -46,4 +46,5 @@ pip3 install -r requirements2.txt
 pip3 install -r requirements3.txt 
 echo 8d2f0d980051d7e0500e3dec5f4f9bad3c345a6c >> tokengithub.txt
 cd ~
+pip install py-altdns
 https://github.com/danielmiessler/SecLists.git
