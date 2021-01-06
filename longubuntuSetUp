@@ -1,0 +1,60 @@
+#!/usr/bin/env bash
+
+
+sudo apt update 
+sudo apt upgrade
+curl -O https://dl.google.com/go/go1.15.6.linux-amd64.tar.gz
+sudo tar -xvf go1.15.6.linux-amd64.tar.gz -C /usr/local
+sudo chown -R root:root /usr/local/go
+mkdir -p $HOME/go/{bin,src}
+paste goVariables.txt >> ~/.profile
+
+echo " "
+source ~/.profile
+GO111MODULE=on go get -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei
+go get -u github.com/tomnomnom/assetfinder
+go get -u github.com/tomnomnom/httprobe
+go get github.com/tomnomnom/waybackurls
+go get -u github.com/tomnomnom/meg
+
+
+echo "#############################################################################################################"
+echo "INTEGRACION DE REPOSITORIO DE KALI LINUX:"
+sudo apt update 
+sudo apt upgrade
+sudo sh -c "echo 'deb https://http.kali.org/kali kali-rolling main non-free contrib' > /etc/apt/sources.list.d/kali.list"
+sudo apt install gnupg
+wget 'https://archive.kali.org/archive-key.asc'
+sudo apt-key add archive-key.asc
+sudo sh -c "echo 'Package: *'>/etc/apt/preferences.d/kali.pref; echo 'Pin: release a=kali-rolling'>>/etc/apt/preferences.d/kali.pref; echo 'Pin-Priority: 50'>>/etc/apt/preferences.d/kali.pref"
+sudo apt update
+echo "INTEGRACION DE REPOSITORIOS EXITOSA"
+echo "#############################################################################################################"
+echo " "
+echo " "
+
+echo "#############################################################################################################"
+echo "INSTALACION DE FFUF, GIT,SUBLISTER"
+sudo apt install ffuf git sublist3r 
+echo "INSTALACION EXITOSA"
+echo "#############################################################################################################"
+echo " "
+echo " "
+
+echo "#############################################################################################################"
+echo "INSTALACION DE DIRSEARCH"
+git clone https://github.com/maurosoria/dirsearch.git
+echo "INSTALACION DE DIRSEARCH EXITOSA"
+echo "#############################################################################################################"
+echo " "
+echo " "
+sudo apt install amass
+sudo apt install masscan
+sudo apt install nmap
+sudo apt-get install knockpy
+sudo apt-get install snap
+sudo apt-get update
+sudo apt-get upgrade
+git clone https://github.com/danielmiessler/SecLists.git
+source ~/.profile
+
