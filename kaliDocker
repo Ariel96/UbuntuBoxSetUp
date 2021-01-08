@@ -4,5 +4,5 @@ sudo apt update
 sudo apt install docker.io
 sudo docker pull kalilinux/kali-rolling
 echo " "
-sudo docker run --tty kalilinux/kali-rolling /bin/bash
+cat dockerCommand.txt
 
