@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
-apt update 
-apt install curl
+sudo apt update 
 git clone https://github.com/maurosoria/dirsearch.git
 git clone https://github.com/danielmiessler/SecLists.git
-apt install amass masscan nmap ffuf
+sudo apt install curl amass masscan nmap ffuf cewl
