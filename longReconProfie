@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 sudo apt update
-sudo appt upgrade 
+sudo apt upgrade 
 curl -O https://dl.google.com/go/go1.15.6.linux-amd64.tar.gz
 sudo tar -xvf go1.15.6.linux-amd64.tar.gz -C /usr/local
 sudo chown -R root:root /usr/local/go
@@ -44,7 +44,6 @@ git clone https://github.com/gwen001/github-search.git
 cd github-search
 pip3 install -r requirements2.txt
 pip3 install -r requirements3.txt 
-echo 8d2f0d980051d7e0500e3dec5f4f9bad3c345a6c >> tokengithub.txt
 cd ~
 pip install py-altdns
-https://github.com/danielmiessler/SecLists.git
+git clone https://github.com/danielmiessler/SecLists.git
