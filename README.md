@@ -1,3 +1,3 @@
 # UbuntuBoxSetUp
 
-Some bash script to setup ubuntu boxes with pentest tools :)
+Some bash scripts to setup ubuntu boxes with pentest tools :)
