@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+cd ~
+sudo apt install firefox-esr
+git clone https://github.com/FortyNorthSecurity/EyeWitness.git
+cd boxsetup
+sudo mv geckodriver /usr/sbin
+cd ~
+cd Eyewitness
+cd Python/setup
+sudo ./setup.sh
+cd ~
+
