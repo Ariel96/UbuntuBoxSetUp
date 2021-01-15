@@ -2,6 +2,7 @@
 
 cd ~
 sudo apt install firefox-esr
+sudo apt install wget
 git clone https://github.com/FortyNorthSecurity/EyeWitness.git
 cd boxsetup
 sudo mv geckodriver /usr/sbin
