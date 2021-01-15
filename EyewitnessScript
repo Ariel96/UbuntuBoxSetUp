@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-cd ~
+cd ..
 sudo apt install firefox-esr
 git clone https://github.com/FortyNorthSecurity/EyeWitness.git
 cd boxsetup
