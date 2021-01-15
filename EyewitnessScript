@@ -6,7 +6,7 @@ git clone https://github.com/FortyNorthSecurity/EyeWitness.git
 cd boxsetup
 sudo mv geckodriver /usr/sbin
 cd ..
-cd Eyewitness
+cd EyeWitness
 cd Python/setup
 sudo ./setup.sh
 cd ..
