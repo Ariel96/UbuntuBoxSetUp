@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+curl -O https://golang.org/dl/go1.15.7.linux-arm64.tar.gz
+tar -xvf go1.15.7.linux-arm64.tar.gz -C /usr/local
+chown -R root:root /usr/local/go
+mkdir -p $HOME/go/{bin,src}
+paste goVariables.txt >> ~/.profile
+
+echo " "
+source ~/.profile
+. ~/.profile
+echo " "
+go get -u github.com/tomnomnom/assetfinder
+go get -u github.com/tomnomnom/httprobe
+go get github.com/tomnomnom/waybackurls
+go get -u github.com/tomnomnom/meg
+
+sudo apt install sublist3r amass masscan nmap python
+
+sudo apt install python3-pip
+sudo apt install python-pip
+
+git clone https://github.com/gwen001/github-search.git
+cd github-search
+pip3 install -r requirements2.txt
+pip3 install -r requirements3.txt 
+cd ~
