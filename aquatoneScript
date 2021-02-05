@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+sudo apt update 
+sudo apt install zip unzip golang
+go get github.com/michenriksen/aquatone
+cd go/src/github.com/michenriksen/aquatone
+./build.sh
+cd build
+rm aquatone_macos_amd64_1.7.0.zip 
+rm aquatone_windows_amd64_1.7.0.zip
+sudo unzip aquatone_linux_amd64_1.7.0.zip -d /root
+cd ~
+sudo mv aquatone /usr/local/bin
+sudo apt install chromium-browser
+
+
