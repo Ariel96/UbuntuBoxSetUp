@@ -10,6 +10,7 @@ rm aquatone_macos_amd64_1.7.0.zip
 rm aquatone_windows_amd64_1.7.0.zip
 sudo unzip aquatone_linux_amd64_1.7.0.zip -d /root
 cd ~
+cd go/bin
 sudo mv aquatone /usr/local/bin
 sudo apt install chromium-browser
 
